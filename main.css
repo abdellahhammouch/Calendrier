@@ -18,3 +18,16 @@ header{
     width: 10%;
     
 }
+
+.navigationdessemaines{
+    padding: 3% 0;
+}
+
+.navigationdessemaines button{
+    background-color: #3498db;
+    border: transparent;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
