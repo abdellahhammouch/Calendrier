@@ -4,10 +4,17 @@
 }
 
 header{
-    height: 20%;
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: steelblue;
     text-align: center;
-    color: brown;
+    color: #8c310b;
+}
+
+#logo-legourmet{
+    display: flex;
+    justify-content: flex-start;
+    width: 10%;
+    
 }
