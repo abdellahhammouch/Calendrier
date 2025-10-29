@@ -24,10 +24,16 @@
 
         </div>
     </main>
-    <div class="form-container" id="formulaire">
-        <div class="modal-content">
-            <span class="close">X</span>
-            <h2 id="modalTitle">Nouvelle Réservation</h2>
+    <div class="formContainer" id="formContainer">
+        <div class="formulaireContainer" id="formulaireContainer">
+            <h2 id="formTitre">Nouvelle Réservation</h2>
+            <form id="formulaire" class="formulaire">
+                <input type="hidden" id="reservationId">
+                <label>Nom du client :</label>
+                <input type="text" id="client-name" required>
+
+               
+            </form>
         </div>
     </div>
     <script src="main.js"></script>
