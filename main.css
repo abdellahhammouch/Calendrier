@@ -53,9 +53,11 @@ header {
 }
 
 .jour{
-    padding: 2%;
+    padding: 4%;
     border: 1.5px solid black;
     border-radius: 5%;
+    background-color: #9fccea;
+    display: block;
 }
 
 
@@ -99,7 +101,7 @@ header {
     margin-top: 15px;
 }
 
-.formulaire input, .formulaire select {
+#clientName, #tempsReservation, #nombreDePersonnes, #reservationType {
     height: 30px;
     border-radius: 10px;
 }
