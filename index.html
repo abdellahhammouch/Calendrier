@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gourmet</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <img id="logo-legourmet" src="images/gourmet.png" alt="Le Gourmet Restaurant Logo">
-        <h1>Réservation Le Gourmet Restaurant</h1>
-        <div class="navigationdessemaines">
-            <button id="semaine-précédente"> Semaine précédente</button>
-            <span id="datedelasemaine"></span>
-            <button id="semaine-suivante">Semaine suivante </button>
-        </div>
+      <img
+        id="logo-legourmet"
+        src="images/gourmet.png"
+        alt="Le Gourmet Restaurant Logo"
+      />
+      <h1>Réservation Le Gourmet Restaurant</h1>
+      <div class="navigationdessemaines">
+        <button id="semaine-précédente">Semaine précédente</button>
+        <span id="datedelasemaine"></span>
+        <button id="semaine-suivante">Semaine suivante</button>
+      </div>
     </header>
 
     <main>
-        <div class="calendrier" id="calendrier-g">
-
+      <div class="calendrierG" id="calendrierG">
+        <div id="joursSemaine" class="joursSemaine">
+          <div class="jours">
+            <p class="jour">Lundi</p>
+            <p class="jour">Mardi</p>
+            <p class="jour">Mercredi</p>
+            <p class="jour">Jeudi</p>
+            <p class="jour">Vendredi</p>
+            <p class="jour">Samedi</p>
+            <p class="jour">Dimanche</p>
+          </div>
+          
         </div>
+      </div>
     </main>
     <div class="formContainer" id="formContainer">
-        <div class="formulaireContainer" id="formulaireContainer">
-            <h2 id="formTitre">Nouvelle Réservation</h2>
-            <form id="formulaire" class="formulaire">
-                <input type="hidden" id="reservationId">
-                <label>Nom du client :</label>
-                <input type="text" id="client-name" required>
+      <div class="formulaireContainer" id="formulaireContainer">
+        <span class="fermer">&times;</span>
+        <h2 id="formTitre">Réservation</h2>
+        <form id="formulaire" class="formulaire">
+          <input type="hidden" id="reservationId" />
+          <label>Nom du client :</label>
+          <input type="text" id="clientName" required />
 
-                <label>Heure de réservation :</label>
-                <select id="tempsReservation" required>
-                    <option value="11:00">11:00</option>
-                    <option value="12:00">12:00</option>
-                    <option value="13:00">13:00</option>
-                    <option value="14:00">14:00</option>
-                    <option value="15:00">15:00</option>
-                    <option value="16:00">16:00</option>
-                </select>
+          <label>Heure de réservation :</label>
+          <select id="tempsReservation" required>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+          </select>
 
-                <label>Nombre de personnes :</label>
-                <input type="number" id="nombreDesPersonnes" min="1" required>
+          <label>Nombre de personnes :</label>
+          <input type="number" id="nombreDesPersonnes" min="1" required />
 
-                <label>Type de réservation :</label>
-                <select id="reservationType" required>
-                    <option value="standard">Standard</option>
-                    <option value="vip">VIP</option>
-                    <option value="anniversaire">Anniversaire</option>
-                    <option value="groupe">Groupe</option>
-                </select>
-                <button type="submit" class="reserverButton" id="reserverButton">Réserver</button>
-            </form>
-        </div>
+          <label>Type de réservation :</label>
+          <select id="reservationType" required>
+            <option value="standard">Standard</option>
+            <option value="vip">VIP</option>
+            <option value="anniversaire">Anniversaire</option>
+            <option value="groupe">Groupe</option>
+          </select>
+          <button type="submit" class="reserverButton" id="reserverButton">
+            Réserver
+          </button>
+        </form>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
