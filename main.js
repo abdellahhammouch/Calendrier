@@ -15,3 +15,8 @@ for (let j = 0; j < 5; j++) {
         form = true;
     })
 }
+
+fermer.addEventListener('click', () => {
+        formContainer.style.display = "none";
+        form = false;
+})
