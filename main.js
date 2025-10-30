@@ -7,6 +7,7 @@ let form ;
 
 for (let i = 0; i < jours.length; i++) {
     jours[i].textContent = i+1;
+    jours[i].style.
 }
 
 for (let j = 0; j < 5; j++) {
@@ -20,3 +21,8 @@ fermer.addEventListener('click', () => {
         formContainer.style.display = "none";
         form = false;
 })
+
+
+if (form === true) {
+    
+}
