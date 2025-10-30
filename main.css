@@ -44,38 +44,20 @@ header {
 
 
 
-.joursSemaine{
+.calendrierG{
+    padding: 5%;
     display: grid;
-    grid-template-rows: 50px 100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 170px);
+    gap: 2%;
 }
 
-.jours{
-    grid-row: 1 / 2;
-    background-color: #3980b0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 12.016% 12.381% 16.5397% 11.081% 16.306% 13.879% 17.79%;
-    justify-items: center;
-    align-items: center;
-    font-weight: bold;
+.jour{
+    padding: 2%;
+    border: 1.5px solid black;
+    border-radius: 5%;
 }
 
-.jourContainer{
-    width: 100%;
-    height: 100%;
-}
-
-.casesDeReservation{
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: 12.016% 12.381% 16.5397% 11.081% 16.306% 13.879% 17.79%;
-}
-
-
-.case{
-    font-weight: bold;
-}
 
 
 
