@@ -29,24 +29,7 @@ formContainer.addEventListener("submit", (e) => {
     typeR : document.querySelector("#reservationType").value
   }
 
-  let color;
-  switch (infoUser.typeR) {
-    case 'VIP':
-      color = "#ff0000ff";
-      break;
-    case 'Standard':
-      color = "#5100ffff";
-      break;
-    case 'Anniversaire':
-      color = "#00ff00ff";
-      break;
-    case 'Groupe':
-      color = "#ffff00ff";
-      break;
-  
-    default:
-      break;
-  }
+
   const ticket = document.createElement("div");
   ticket.classList.add("reservation", infoUser.typeR.toLowerCase());
   ticket.textContent = `${infoUser.clientName} - ${infoUser.tempsR} - ${infoUser.nbrP} pers. - ${infoUser.typeR}`;
@@ -54,5 +37,30 @@ formContainer.addEventListener("submit", (e) => {
   jourActif.appendChild(ticket);
   formContainer.style.display = "none";
 
+  let color;
+  switch (infoUser.typeR) {
+    case 'vip':
+      color = "#E62727";
+      break;
+    case 'standard':
+      color = "#1E93AB";
+      break;
+    case 'anniversaire':
+      color = "#07c507ff";
+      break;
+    case 'groupe':
+      color = "#DCDCDC";
+      break;
+  
+    default:
+      break;
+  }
+
+  ticket.style.backgroundColor = color ;
+  ticket.style.borderRadius = "10px";
+  ticket.style.padding = "1%";
+  ticket.style.marginBottom = "2%"
+
+  formulaire.reset();
 
 })
