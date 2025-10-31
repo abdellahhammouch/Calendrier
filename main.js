@@ -6,12 +6,10 @@ const fermer = document.querySelector(".fermer");
 let jourActif = null;
 
 jours.forEach((jour, indice) => {
-  if (indice < 5) {
     jour.addEventListener("click",() => {
       formContainer.style.display = "flex";
       jourActif = jour;
     });
-  }
 });
 
 fermer.addEventListener("click", ()=> {
