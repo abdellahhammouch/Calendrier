@@ -31,7 +31,7 @@ code:
 1. Ouvrir `index.html` dans un navigateur.
 2. Cliquer sur un jour pour ouvrir le formulaire.
 3. Remplir les champs et valider.
-4. Double-cliquer ou cliquer sur ✖ pour supprimer une réservation.
+4. Double-cliquer ou cliquer sur X pour supprimer une réservation.
 5. Cliquer sur une étiquette pour la modifier via le formulaire.
 
 ---
