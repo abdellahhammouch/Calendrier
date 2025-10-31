@@ -19,7 +19,7 @@ fermer.addEventListener("click", () => {
 
 formContainer.addEventListener("submit", (e) => {
   e.preventDefault();
-  const infoUser = {
+  let infoUser = {
     id: Date.now(),
     clientName: document.querySelector("#clientName").value.trim(),
     tempsR: document.querySelector("#tempsReservation").value,
@@ -32,7 +32,7 @@ formContainer.addEventListener("submit", (e) => {
   ticket.textContent = `${infoUser.clientName} - ${infoUser.tempsR} - ${infoUser.nbrP} pers. - ${infoUser.typeR}`;
   ticket.style.display = "flex";
   ticket.id = infoUser.id;
-  console.log(ticket.id);
+
   const boutonSupprimer = document.createElement("button");
   boutonSupprimer.textContent = "✖";
   boutonSupprimer.classList.add("btn-supprimer");
@@ -72,6 +72,31 @@ formContainer.addEventListener("submit", (e) => {
   ticket.style.marginBottom = "2%";
 
   formulaire.reset();
+  
+  boutonSupprimer.addEventListener("click", () => {
+    const confirmation = confirm(
+      "Voulez-vous vraiment supprimer cette réservation ?"
+    );
+    if (confirmation) {
+      ticket.remove();
+    }
+
+  
+  });
+ticket.addEventListener("click", ()=>{
+  formContainer.style.display = "flex";
+  formContainer.addEventListener("submit", (e) => {
+  e.preventDefault();
+  infoUser = {
+    id: Date.now(),
+    clientName: "",
+    tempsR: "",
+    nbrP: "",
+    typeR: ""
+  };
+  document.getElementById(ticket.id).remove();
+  ticket.textContent = `${document.querySelector("#clientName").value.trim()} - ${document.querySelector("#tempsReservation").value} - ${document.querySelector("#nombreDePersonnes").value} pers. - ${document.querySelector("#reservationType").value}`;
+  });
 
   boutonSupprimer.addEventListener("click", () => {
     const confirmation = confirm(
@@ -80,27 +105,11 @@ formContainer.addEventListener("submit", (e) => {
     if (confirmation) {
       ticket.remove();
     }
-  });
+    formulaire.reset();
+})
+})
+})
 
-  
 
 
-
-  ticket.forEach((jour, indice) => {
-    jour.addEventListener("click", () => {
-      formContainer.style.display = "flex";
-      jourActif = jour;
-    });
-  });
-
-  ticket.addEventListener("click", () => {
-    e.preventDefault();
-    let modifier = e.target.parentElement;
-
-    hourM.value = editDiv.firstChild.textContent;
-    console.log(hourM);
-
-    tasktxtM = txt_content;
-  });
-});
 
