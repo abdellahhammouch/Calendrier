@@ -6,7 +6,7 @@ const fermer = document.querySelector(".fermer");
 let jourActif = null;
 
 jours.forEach((jour, indice) => {
-    jour.addEventListener("click",() => {
+    jour.addEventListener("dblclick",() => {
       formContainer.style.display = "flex";
       jourActif = jour;
     });
@@ -62,6 +62,7 @@ formContainer.addEventListener("submit", (e) => {
   formulaire.reset();
 
 })
+
 
 
 
