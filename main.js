@@ -58,7 +58,7 @@ formContainer.addEventListener("submit", (e) => {
   ticket.style.borderRadius = "10px";
   ticket.style.padding = "1%";
   ticket.style.marginBottom = "2%"
-
+  
   formulaire.reset();
 
 })
