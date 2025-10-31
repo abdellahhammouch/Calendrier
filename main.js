@@ -34,12 +34,12 @@ formContainer.addEventListener("submit", (e) => {
   const boutonSupprimer = document.createElement("button");
   boutonSupprimer.textContent = "✖";
   boutonSupprimer.classList.add("btn-supprimer");
-  ticket.appendChild(boutonSupprimer);
   boutonSupprimer.style.justifyContent = "flex-end";
   boutonSupprimer.style.cursor = "pointer";
   boutonSupprimer.style.border = "none";
   boutonSupprimer.style.background = "transparent";
   boutonSupprimer.style.fontWeight = "bold";
+  ticket.appendChild(boutonSupprimer);
 
   jourActif.appendChild(ticket);
   ticket.appendChild(boutonSupprimer);
@@ -72,7 +72,8 @@ formContainer.addEventListener("submit", (e) => {
   formulaire.reset();
 
   boutonSupprimer.addEventListener("click", () => {
-    const confirmation = confirm("Voulez-vous vraiment supprimer cette réservation ?"
+    const confirmation = confirm(
+      "Voulez-vous vraiment supprimer cette réservation ?"
     );
     if (confirmation) {
       ticket.remove();
