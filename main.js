@@ -28,9 +28,11 @@ formContainer.addEventListener("submit", (e) => {
   };
 
   const ticket = document.createElement("div");
-  ticket.style.display = "flex";
   ticket.classList.add("reservation", infoUser.typeR.toLowerCase());
   ticket.textContent = `${infoUser.clientName} - ${infoUser.tempsR} - ${infoUser.nbrP} pers. - ${infoUser.typeR}`;
+  ticket.style.display = "flex";
+  ticket.id = infoUser.id;
+  console.log(ticket.id);
   const boutonSupprimer = document.createElement("button");
   boutonSupprimer.textContent = "✖";
   boutonSupprimer.classList.add("btn-supprimer");
@@ -80,6 +82,25 @@ formContainer.addEventListener("submit", (e) => {
     }
   });
 
-
   
+
+
+
+  ticket.forEach((jour, indice) => {
+    jour.addEventListener("click", () => {
+      formContainer.style.display = "flex";
+      jourActif = jour;
+    });
+  });
+
+  ticket.addEventListener("click", () => {
+    e.preventDefault();
+    let modifier = e.target.parentElement;
+
+    hourM.value = editDiv.firstChild.textContent;
+    console.log(hourM);
+
+    tasktxtM = txt_content;
+  });
 });
+
