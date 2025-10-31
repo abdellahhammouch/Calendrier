@@ -68,6 +68,7 @@ header {
     display: block;
     overflow: scroll;
     scrollbar-width: none;
+    transition: transform 0.3s ease;
 }
 
 .weekEnd{
@@ -78,16 +79,7 @@ header {
     display: block;
     opacity: 60%;
 }
-
-/* img {
-  transition: transform 0.3s ease;
-}
-
-img:hover {
-  transform: scale(1.1);
-} */
-
-
+ 
 .jour :hover{
     transform: scale(1.3);
 }
