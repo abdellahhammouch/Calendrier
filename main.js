@@ -47,8 +47,12 @@ formContainer.addEventListener("submit", (e) => {
     default:
       break;
   }
+  const ticket = document.createElement("div");
+  ticket.classList.add("reservation", infoUser.typeR.toLowerCase());
+  ticket.textContent = `${infoUser.clientName} - ${infoUser.tempsR} - ${infoUser.nbrP} pers. - ${infoUser.typeR}`;
 
-  
+  jourActif.appendChild(ticket);
+  formContainer.style.display = "none";
 
 
 })
