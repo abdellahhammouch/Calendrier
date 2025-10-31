@@ -68,8 +68,9 @@ header {
     display: block;
     overflow: scroll;
     scrollbar-width: none;
-    transition: transform 0.3s ease;
+
 }
+
 
 .weekEnd{
     padding: 4%;
@@ -79,10 +80,7 @@ header {
     display: block;
     opacity: 60%;
 }
- 
-.jour :hover{
-    transform: scale(1.2);
-}
+
 
  
  
