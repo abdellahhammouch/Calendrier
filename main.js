@@ -31,6 +31,7 @@ formContainer.addEventListener("submit", (e) => {
   const ticket = document.createElement("div");
   ticket.classList.add("reservation", infoUser.typeR.toLowerCase());
   ticket.textContent = `${infoUser.clientName} - ${infoUser.tempsR} - ${infoUser.nbrP} pers. - ${infoUser.typeR}`;
+  ticket.style.zIndex = "1";
 
   jourActif.appendChild(ticket);
   formContainer.style.display = "none";
@@ -61,7 +62,14 @@ formContainer.addEventListener("submit", (e) => {
 
   formulaire.reset();
 
+  ticket.addEventListener("click", () => {
+  const confirmation = confirm("Voulez-vous vraiment supprimer cette réservation ?");
+  if (confirmation) {
+    ticket.remove();
+  }
+  })
 })
+
 
 
 
