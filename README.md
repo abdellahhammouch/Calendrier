@@ -9,7 +9,7 @@ Une application front-end permettant aux utilisateurs d’ajouter, modifier et s
 - Affichage d’un calendrier hebdomadaire (lundi à vendredi)
 - Formulaire dynamique pour ajouter une réservation
 - Limite de 5 réservations par jour
-- Suppression par double-clic ou bouton ✖
+- Suppression par double-clic ou bouton X
 - Modification d’une réservation via formulaire pré-rempli
 - Style responsive avec `@media` queries
 - Design moderne avec `box-shadow`, typographie et couleurs personnalisées
