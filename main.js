@@ -28,4 +28,27 @@ formContainer.addEventListener("submit", (e) => {
     nbrP : document.querySelector("#nombreDePersonnes").value,
     typeR : document.querySelector("#reservationType").value
   }
+
+  let color;
+  switch (infoUser.typeR) {
+    case 'VIP':
+      color = "#ff0000ff";
+      break;
+    case 'Standard':
+      color = "#5100ffff";
+      break;
+    case 'Anniversaire':
+      color = "#00ff00ff";
+      break;
+    case 'Groupe':
+      color = "#ffff00ff";
+      break;
+  
+    default:
+      break;
+  }
+
+  
+
+
 })
