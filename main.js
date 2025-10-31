@@ -10,3 +10,7 @@ jours.forEach((jour, indice) => {
     });
   }
 });
+
+fermer.addEventListener("click", () => {
+  formContainer.style.display = "none";
+})
